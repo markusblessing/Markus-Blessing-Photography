@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Photo Portfolio</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .portfolio img {
+        width: 30%;
+        height: 30%;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #ddd;
+        transition: all 0.3s ease-in-out;
+      }
+      .portfolio img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px #333;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Photo Portfolio</h1>
+    <div class="portfolio">
+        <img src="IMG_1.jpg" alt="Image 1" id="img1">
+        <img src="IMG_2.jpg" alt="Image 2" id="img2">
+        <img src="IMG_3.jpeg" alt="Image 3" id="img3">
+        <img src="IMG_4.jpg" alt="Image 4" id="img4">
+        <img src="IMG_5.jpg" alt="Image 5" id="img5">
+        <img src="IMG_6.jpg" alt="Image 6" id="img6">
+        <img src="IMG_7.jpg" alt="Image 7" id="img7">
+        <img src="IMG_8.jpg" alt="Image 8" id="img8">
+        <img src="IMG_9.jpeg" alt="Image 9" id="img9">
+        <img src="IMG_10.jpg" alt="Image 10" id="img10">
+        <img src="IMG_11.jpg" alt="Image 11" id="img11">
+    </div>
+    <script>
+      const images = document.querySelectorAll(".portfolio img");
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          alert(`This is Photo ${index + 1}`);
+        });
+      });
+    </script>
+  </body>
+</html>
